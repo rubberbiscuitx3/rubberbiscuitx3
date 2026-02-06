@@ -1,42 +1,70 @@
-/* Light mode defaults */
+/* Base typography & layout */
 body {
   font-family: system-ui, sans-serif;
-  margin: 40px;
-  background-color: #ffffff;
-  color: #222;
-  transition: background-color 0.3s, color 0.3s;
+  margin: 0;
 }
 
-/* Hide the checkbox */
-#dark-toggle {
-  display: none;
+/* Theme variables (light by default) */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222;
+  --toggle-bg: #eee;
+  --toggle-text: #333;
 }
 
-/* Style the toggle label */
-.toggle {
-  cursor: pointer;
-  display: inline-block;
-  margin-bottom: 24px;
-  padding: 8px 12px;
-  border-radius: 6px;
-  background: #eee;
-  color: #333;
-  font-size: 0.9rem;
+/* System dark mode default */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #121212;
+    --text-color: #eaeaea;
+    --toggle-bg: #2a2a2a;
+    --toggle-text: #eaeaea;
+  }
 }
 
-/* Dark mode styles */
+/* Page wrapper */
 .page {
-  background-color: #ffffff;
-  color: #222;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   padding: 40px;
   min-height: 100vh;
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Dark mode when checkbox is checked */
-#dark-toggle:checked ~ .page {
-  background-color: #121212;
-  color: #eaeaea;
+/* Hide checkbox */
+#dark-toggle {
+  display: none;
 }
 
+/* Toggle label */
+.toggle {
+  cursor: pointer;
+  display: inline-block;
+  margin: 24px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: var(--toggle-bg);
+  color: var(--toggle-text);
+  font-size: 0.9rem;
+}
 
+/* Manual dark mode override (wins over system) */
+#dark-toggle:checked ~ .page {
+  --bg-color: #121212;
+  --text-color: #eaeaea;
+  --toggle-bg: #2a2a2a;
+  --toggle-text: #eaeaea;
+}
+
+/* Toggle label text swap */
+.dark-label {
+  display: none;
+}
+
+#dark-toggle:checked + .toggle .light-label {
+  display: none;
+}
+
+#dark-toggle:checked + .toggle .dark-label {
+  display: inline;
+}
