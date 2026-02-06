@@ -14,3 +14,12 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+- 🔭 I’m currently working on ... this
+- 🌱 I’m currently learning ... web dev
+- 👯 I’m looking to collaborate on ... nothing
+- 🤔 I’m looking for help with ... nothing
+- 💬 Ask me about ... my day
+- 📫 How to reach me: ... don't
+- 😄 Pronouns: ... she/her
+- ⚡ Fun fact: ... sky is blue
