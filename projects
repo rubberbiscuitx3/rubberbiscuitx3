@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <!-- toggle stays the same -->
+    <input type="checkbox" id="dark-toggle" />
+    <label for="dark-toggle" class="switch">…</label>
+
+    <div class="page">
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+      </nav>
+
+      <h1>About</h1>
+      <p>This page is about my projects.</p>
+    </div>
+  </body>
+</html>
