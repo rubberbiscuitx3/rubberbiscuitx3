@@ -22,3 +22,36 @@
     </div>
   </body>
 </html>
+
+<script>
+  const toggle = document.getElementById("dark-toggle");
+  const page = document.getElementById("page");
+
+  // Apply saved theme on load
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme === "dark") {
+    page.style.setProperty("--bg-color", "#121212");
+    page.style.setProperty("--text-color", "#eaeaea");
+    toggle.checked = true;
+  }
+
+  if (savedTheme === "light") {
+    page.style.setProperty("--bg-color", "#ffffff");
+    page.style.setProperty("--text-color", "#222");
+    toggle.checked = false;
+  }
+
+  // Listen for toggle changes
+  toggle.addEventListener("change", () => {
+    if (toggle.checked) {
+      page.style.setProperty("--bg-color", "#121212");
+      page.style.setProperty("--text-color", "#eaeaea");
+      localStorage.setItem("theme", "dark");
+    } else {
+      page.style.setProperty("--bg-color", "#ffffff");
+      page.style.setProperty("--text-color", "#222");
+      localStorage.setItem("theme", "light");
+    }
+  });
+</script>
