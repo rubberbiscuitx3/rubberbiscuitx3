@@ -54,25 +54,6 @@ body {
   --text-color: #eaeaea;
 }
 
-/* Force LIGHT when unchecked */
-#dark-toggle:not(:checked) ~ .page {
-  --bg-color: #ffffff;
-  --text-color: #222;
-}
-
-/* Toggle label text swap */
-.dark-label {
-  display: none;
-}
-
-#dark-toggle:checked + .toggle .light-label {
-  display: none;
-}
-
-#dark-toggle:checked + .toggle .dark-label {
-  display: inline;
-}
-
 /* Switch container */
 .switch {
   position: relative;
